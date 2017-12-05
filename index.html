@@ -10,16 +10,7 @@
 	<meta name="description" content="HTML 5 soundboard.">
 	<meta name="keywords" content="HTML5, Mobile, Soundboard, IBM">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<script src="https://code.jquery.com/jquery-3.1.1.js"
-		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-		crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
-		crossorigin="anonymous"
-		defer></script>
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
 		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
 		crossorigin="anonymous">
 	<style>
@@ -40,459 +31,324 @@
 		td, th {
 			padding: 10px;
 		}
+            .btn { margin: 5px }
     </style>
 </head>
 <body>
-
+                  <audio id="stavsoundboard" src="audio/StavSoundBoard.mp3"></audio>
 	<div class="container">
 		<div class="col-xs-12 col-sm-8">
-			
             <h2>StavBot</h2>
-            <audio id="stavsoundboard" src="audio/StavSoundBoard.mp3"></audio>
 
-            <audio id="abs" src="audio/Absolutely.mp3"></audio>
-			<audio id="hell1" src="audio/HellYeahDude.mp3"></audio>
-			<audio id="hell2" src="audio/HellYeahDude2.mp3"></audio>
-			<audio id="inter" src="audio/Interesting.mp3"></audio>
-            <audio id="nice" src="audio/Nice.mp3"></audio>
-            <audio id="nicedude" src="audio/NiceDude.mp3"></audio>
-            <audio id="nofuck" src="audio/NoFuckNo.mp3"></audio>
-            <audio id="right" src="audio/Right.mp3"></audio>
-            <audio id="sex" src="audio/Sex.mp3"></audio>
-            <audio id="stavcak1" src="audio/StavCackle1.mp3"></audio>
-            <audio id="stavcak2" src="audio/StavCackle2.mp3"></audio>
-            <audio id="woo" src="audio/woo.mp3"></audio>
-            <audio id="obnox" src="audio/SlightlyObnoxiousStavCackle.mp3"></audio>
-            <audio id="yes" src="audio/Yes.mp3"></audio>
-            <audio id="shit" src="audio/ShitsBoring.mp3"></audio>
-            <audio id="isuck" src="audio/ISuck.mp3"></audio>
-            <audio id="gay" src="audio/StavsGay.mp3"></audio>
-            <audio id="rules" src="audio/FuckingRules.mp3"></audio>
-            <audio id="metoo" src="audio/MeToo.mp3"></audio>
-            <audio id="yes2" src="audio/Yes2.mp3"></audio>
-            <audio id="yeah" src="audio/Yeah.mp3"></audio>
-            <audio id="yeayeayea" src="audio/YeaYeaYeaStav.mp3"></audio>
-            <audio id="youknow" src="audio/YouKnow.mp3"></audio>
-            <audio id="fuckyeahdude" src="audio/FuckYeahDude.mp3"></audio>
-            <audio id="dudehellyeah" src="audio/DudeHellYeahDude.mp3"></audio>
-            <audio id="ohyeahdude" src="audio/OhYeahDude.mp3"></audio>
-            <audio id="ohyeah" src="audio/OhYea.mp3"></audio>
-            <audio id="yesdude" src="audio/YesDude.mp3"></audio>
-            <audio id="hellyeahtired" src="audio/HellYeahTired.mp3"></audio>
-            <audio id="cackle4" src="audio/Cackle4.mp3"></audio>
-            <audio id="cackle5" src="audio/Cackle5.mp3"></audio>
-            <audio id="cackle6" src="audio/Cackle6.mp3"></audio>
-            <audio id="damn" src="audio/Damn.mp3"></audio>
-            <audio id="stavlaughfuckdude" src="audio/StavLaughFuckDude.mp3"></audio>
+            <button class="btn btn-primary btn-lg" onclick="Array.from(document.getElementsByTagName('audio')).forEach(function(e){e.pause(); e.currentTime=0;})">Silence</button>
 
+            <button class="btn btn-primary btn-lg" onclick="document.getElementById('stavsoundboard').play()">Soundboard</button>
 
-            <audio id="cupcake" src="audio/CupcakeAndCandyBar.mp3"></audio>
-            <audio id="fried" src="audio/FriedSpam.mp3"></audio>
-            <audio id="lent" src="audio/LentilsAndRiceAndShit.mp3"></audio>
-            <audio id="peanut" src="audio/PeanutOil.mp3"></audio>
-            <audio id="quad" src="audio/QuadBurgers.mp3"></audio>
-            <audio id="fava" src="audio/FavaBeans.mp3"></audio>
-            <audio id="jimd" src="audio/40Jimmy.mp3"></audio>
-            <audio id="stavsnacks" src="audio/stavsnacks.mp3"></audio>
-            <audio id="stavlying" src="audio/stavlying.mp3"></audio>
-            <audio id="hamburgerschnitzel" src="audio/hamburgerschnitzel.mp3"></audio>
-            <audio id="fourkielbasas" src="audio/fourkielbasas.mp3"></audio>
-            <audio id="chickentenders" src="audio/chickentenders.mp3"></audio>
-
-
-			<audio id="Tumble" src="audio/TumbleOutOfBed.mp3"></audio>
-			<audio id="5AM" src="audio/MoreLike5AM.mp3"></audio>
-			<audio id="Pod5AM" src="audio/Podcast5AM.mp3"></audio>
-            <audio id="5AM3" src="audio/MoreLike5AM3.mp3"></audio>
-            <audio id="5AMdouble" src="audio/MoreLike5AMDouble.mp3"></audio>
-            <audio id="adam5AM" src="audio/Adam5AM.mp3"></audio>
-            <audio id="more5AMadam" src="audio/MoreLike5AMAdam.mp3"></audio>
-
-<audio id="stavmol" src="audio/StavShutUpBeechMam.mp3"></audio>
-<audio id="nickmol" src="audio/NickShutUpBeechMam.mp3"></audio>
-<audio id="gaygeo" src="audio/GayGeo.mp3"></audio>
-<audio id="dontell" src="audio/ShutUpDontTell.mp3"></audio>
-<audio id="ps4" src="audio/DontTellMePS4.mp3"></audio>
-<audio id="beech" src="audio/Beech.mp3"></audio>
-<audio id="gaygeo2" src="audio/GeosGayCantChange.mp3"></audio>
-<audio id="nickmol2" src="audio/NickShutUpBeechMam2.mp3"></audio>
-<audio id="sucknuts" src="audio/SuckMyNutsMam.mp3"></audio>
-<audio id="nickmol3" src="audio/FuckYouBeechMam.mp3"></audio>
-<audio id="nickmol4" src="audio/FuckYouMakeMeLunch.mp3"></audio>
-<audio id="nickmol5" src="audio/NickShutUpBeechMam3.mp3"></audio>
-<audio id="nickmol6" src="audio/PSMyWay.mp3"></audio>
-<audio id="shutupbeechstav" src="audio/ShutUpBeechMamStav.mp3"></audio>
-<audio id="shutupbeechnick" src="audio/ShutUpBeechMamNick.mp3"></audio>
-<audio id="jackingout" src="audio/JackingGetOut.mp3"></audio>
-<audio id="learnjack" src="audio/LearnToJack.mp3"></audio>
-<audio id="uglypuss" src="audio/UglyOldPuss.mp3"></audio>
-<audio id="fbitchmam" src="audio/FuckingBitchMam.mp3"></audio>
-<audio id="shutupmam" src="audio/ShutUpMam.mp3"></audio>
-<audio id="getoutjack" src="audio/GetOutJacking.mp3"></audio>
-<audio id="learnbeat" src="audio/LearnedToBeatIt.mp3"></audio>
-<audio id="nogeo" src="audio/NoGeoNo.mp3"></audio>
-<audio id="geosayn" src="audio/GeoSayNWord.mp3"></audio>
-<audio id="geocant" src="audio/GeoCantSay.mp3"></audio>
-<audio id="letgeo" src="audio/LetGeoSayIt.mp3"></audio>
-<audio id="shutupmam2" src="audio/ShutUpBeechMam.mp3"></audio>
-
-
-<audio id="stavadamlaugh" src="audio/StavAdamLaugh.mp3"></audio>
-<audio id="goodbitadam" src="audio/GoodBitAdam.mp3"></audio>
-<audio id="yeayeayea" src="audio/YeaYeaYea.mp3"></audio>
-<audio id="stavadamlaughing" src="audio/StavAndAdamLaughing.mp3"></audio>
-
-
-<audio id="badnewsadam" src="audio/BadNewsDad.mp3"></audio>
-<audio id="gayoutoffam" src="audio/GayOutOfFam.mp3"></audio>
-
-
-<audio id="filledwithdildoes" src="audio/FilledWithDildoes.mp3"></audio>
-<audio id="dildonoise" src="audio/DildoNoise.mp3"></audio>
-<audio id="oneofthosedildoes" src="audio/OneOfThoseDildoes.mp3"></audio>
-<audio id="betonnotgay" src="audio/BetOnNotGay.mp3"></audio>
-<audio id="bitchbooks" src="audio/BooksBitch.mp3"></audio>
-<audio id="eatpuss" src="audio/EatPuss.mp3"></audio>
-<audio id="cheatpuss" src="audio/CheatPuss.mp3"></audio>
-
-
-<audio id="billyjoel" src="audio/BillyJoel.mp3"></audio>
-<audio id="billyjoelstav" src="audio/billyjoelstav.mp3"></audio>
-<audio id="billyblow" src="audio/billyblow.mp3"></audio>
-<audio id="typicalbjlyrics" src="audio/typicalbjlyrics.mp3"></audio>
-
-
-<audio id="adamsgay" src="audio/AdamsGay.mp3"></audio>
-<audio id="itsjustgay" src="audio/ItsJustGay.mp3"></audio>
-
-<audio id="dickshitheroin" src="audio/DickShitHeroin.mp3"></audio>
-<audio id="hellyeahpolice" src="audio/HellYeahPolice.mp3"></audio>
-<audio id="hellyeahjake" src="audio/HellYeahJake.mp3"></audio>
-<audio id="pieceofshit" src="audio/PieceOfShit.mp3"></audio>
-<audio id="thanksdude" src="audio/ThanksDude.mp3"></audio>
-<audio id="dumbarmenians" src="audio/DumbArmenians.mp3"></audio>
-<audio id="obsessive" src="audio/Obsessive.mp3"></audio>
-
-<audio id="interestingnick" src="audio/InterestingNick.mp3"></audio>
-<audio id="staytuned" src="audio/StayTuned.mp3"></audio>
-
-
-<audio id="mexicannoshit" src="audio/MexicanNoShit.mp3"></audio>
-<audio id="mexicannoshit2" src="audio/MexicanNoShit2.mp3"></audio>
-<audio id="dacashit" src="audio/DACAShit.mp3"></audio>
-<audio id="realmex" src="audio/FromRealMexican.mp3"></audio>
-
-
-<audio id="anchorbabyadam" src="audio/AnchorBabyAdam.mp3"></audio>
-<audio id="anchorbabynick" src="audio/AnchorBabiesNick.mp3"></audio>
-<audio id="goodterm" src="audio/GoodTerm.mp3"></audio>
-<audio id="hellyeahjake2" src="audio/HellYeahJake2.mp3"></audio>
-<audio id="whylook" src="audio/WhyYouLookin.mp3"></audio>
-<audio id="lazymexi" src="audio/LazyMexican.mp3"></audio>
-<audio id="wakeup" src="audio/WakeTheFuckUp.mp3"></audio>
-
-
-
-<audio id="bfstadam" src="audio/BreakfastAdam.mp3"></audio>
-<audio id="bfstnick" src="audio/BreakfastNick.mp3"></audio>
-
-
-<audio id="3food" src="audio/3FoodGroups.mp3"></audio>
-<audio id="fav3food" src="audio/Favorite3FoodGroups.mp3"></audio>
-<audio id="tasteofaids" src="audio/TasteOfAidsyPussy.mp3"></audio>
-
-<audio id="neverrespstav" src="audio/AfricanManNeverRespect.mp3"></audio>
-<audio id="neverresp" src="audio/NeverRespectAWoman.mp3"></audio>
-<audio id="noconsent" src="audio/NotCapableOfConsent.mp3"></audio>
-
-<audio id="woo2" src="audio/woo2.mp3"></audio>
-<audio id="bukkakerunt" src="audio/bukkakerunt.mp3"></audio>
-<audio id="outtayourmind" src="audio/outtayourmind.mp3"></audio>
-<audio id="nickwoo" src="audio/nickwoo.mp3"></audio>
-<audio id="birthdayson" src="audio/birthdayson.mp3"></audio>
-<audio id="hefuckmyassmannequin" src="audio/hefuckmyassmannequin.mp3"></audio>
-<audio id="clowncollegeboipussy" src="audio/clowncollegeboipussy.mp3"></audio>
-<audio id="clowncollegeboipussy2" src="audio/clowncollegeboipussy2.mp3"></audio>
-<audio id="stavfinallaffbumba" src="audio/stavfinallaffbumba.mp3"></audio>
-<audio id="woowee" src="audio/woowee.mp3"></audio>
-
-<audio id="adamunwoke" src="audio/adamunwoke.mp3"></audio>
-<audio id="stavlovesrape" src="audio/stavlovesrape.mp3"></audio>
-<audio id="sandalsoffrape" src="audio/sandalsoffrape.mp3"></audio>
-<audio id="wearsandalsnorespect" src="audio/wearsandalsnorespect.mp3"></audio>
-<audio id="nickbreakscharacter" src="audio/nickbreakscharacter.mp3"></audio>
-<audio id="neverrespect" src="audio/neverrespect.mp3"></audio>
-<audio id="africaneeds" src="audio/africaneeds.mp3"></audio>
-<audio id="stavdyinglaughing" src="audio/stavdyinglaughing.mp3"></audio>
-<audio id="penetratewhenitscreams" src="audio/penetratewhenitscreams.mp3"></audio>
-<audio id="whenitscreams" src="audio/whenitscreams.mp3"></audio>
-<audio id="useaknife" src="audio/useaknife.mp3"></audio>
-<audio id="adamlittledicknosex" src="audio/adamlittledicknosex.mp3"></audio>
-<audio id="albinochild" src="audio/albinochild.mp3"></audio>
-<audio id="neverhadsex" src="audio/neverhadsex.mp3"></audio>
-<audio id="adamlittledick" src="audio/adamlittledick.mp3"></audio>
-<audio id="bitchassmudda" src="audio/bitchassmudda.mp3"></audio>
-
-<audio id="mayopaleo.mp3" src="audio/mayopaleo.mp3"></audio>
-<audio id="battleofnampham.mp3" src="audio/battleofnampham.mp3"></audio>
-<audio id="albinobitch.mp3" src="audio/albinobitch.mp3"></audio>
-<audio id="fuckeyes.mp3" src="audio/fuckeyes.mp3"></audio>
-<audio id="bitchalbino.mp3" src="audio/bitchalbino.mp3"></audio>
-<audio id="cutarmssoup.mp3" src="audio/cutarmssoup.mp3"></audio>
-<audio id="rapistjaygoodtip.mp3" src="audio/rapistjaygoodtip.mp3"></audio>
-<audio id="kneesex.mp3" src="audio/kneesex.mp3"></audio>
-<audio id="stopwomen.mp3" src="audio/stopwomen.mp3"></audio>
-<audio id="stuffedshell.mp3" src="audio/stuffedshell.mp3"></audio>
-<audio id="thousandislandstare.mp3" src="audio/thousandislandstare.mp3"></audio>
-<audio id="thanksjay.mp3" src="audio/thanksjay.mp3"></audio>
-<audio id="jaylenostaring.mp3" src="audio/jaylenostaring.mp3"></audio>
-<audio id="staringatvaj.mp3" src="audio/staringatvaj.mp3"></audio>
-<audio id="thanksafricanguy.mp3" src="audio/thanksafricanguy.mp3"></audio>
-<audio id="stavfucksup.mp3" src="audio/stavfucksup.mp3"></audio>
-<audio id="greatpussy.mp3" src="audio/greatpussy.mp3"></audio>
-<audio id="stavsafatfuck.mp3" src="audio/stavsafatfuck.mp3"></audio>
-<audio id="youareabitch.mp3" src="audio/youareabitch.mp3"></audio>
-<audio id="stavdenies.mp3" src="audio/stavdenies.mp3"></audio>
-<audio id="stavsweating.mp3" src="audio/stavsweating.mp3"></audio>
-<audio id="guesttoday.mp3" src="audio/guesttoday.mp3"></audio>
-<audio id="slugandfuck.mp3" src="audio/slugandfuck.mp3"></audio>
-<audio id="semenjar.mp3" src="audio/semenjar.mp3"></audio>
-<audio id="rapistjay.mp3" src="audio/rapistjay.mp3"></audio>
-<audio id="jaylenoseeass.mp3" src="audio/jaylenoseeass.mp3"></audio>
-<audio id="onlywaytocure.mp3" src="audio/onlywaytocure.mp3"></audio>
-<audio id="jayleno.mp3" src="audio/jayleno.mp3"></audio>
-<audio id="rideinmycar.mp3" src="audio/rideinmycar.mp3"></audio>
-<audio id="albinovirgin.mp3" src="audio/albinovirgin.mp3"></audio>
-
-<audio id="noconsent.mp3" src="audio/noconsent.mp3"></audio>
-
-
-<button class="btn btn-primary btn-lg" onclick="Array.from(document.getElementsByTagName('audio')).forEach(function(e){e.pause(); e.currentTime=0;})">Silence</button>
-
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('stavsoundboard').play()">Soundboard</button>
-
-<h4>Regular Sounds</h4>
-            		    <button class="btn btn-primary btn-lg" onclick="document.getElementById('abs').play()">Absolutely</button>
-                        
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('hell1').play()">Hell Yeah Dude 1</button>
-                        
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('hell2').play()">Hell yeah dude two</button>
-                        
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('inter').play()">interesting</button>
-                        
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('nice').play()">nice</button>
-                        
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('nicedude').play()">nice dude</button>
-                        
-                        <button class="btn btn-primary btn-lg " onclick="document.getElementById('nofuck').play()">no fuck no</button>
-                        
-
-
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('right').play()">right</button>
-                        
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('sex').play()">sexy grunt</button>
-                        
-                        <button class="btn btn-primary btn-lg " onclick="document.getElementById('stavcak1').play()">stav cackle one</button>
-                        
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('stavcak2').play()">stav cackle 2</button>
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('cackle4').play()">Stav cackle 4</button>
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('cackle5').play()">stav cackle 5</button>
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('cackle6').play()">stav cackle 6</button>
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('stavfinallaffbumba').play()">stav cackle bumba</button>
-
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('stavlaughfuckdude').play()">Stav Laugh Fuck Dude</button>
-                        <button class="btn btn-primary btn-lg " onclick="document.getElementById('stavdyinglaughing').play()">Stav dying laughing</button>
-
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('obnox').play()">Slightly Obnoxious Stav Cackle</button>
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('woo').play()">woo</button>
-                        
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('woo2').play()">wild woo</button>
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('nickwoo').play()">nick woo</button>
-                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('woowee').play()">wilder woo</button>
-
-
-
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('yes').play()">Yes</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('shit').play()">Shit's Boring Who Cares</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('isuck').play()">I Suck</button>
-
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('rules').play()">Rules</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('metoo').play()">Me too</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('yes2').play()">Yes 2</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('yeah').play()">yeah</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('yeayeayea').play()">yea yea yea</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('youknow').play()">you know?</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('fuckyeahdude').play()">fuck yeah dude</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('dudehellyeah').play()">dude hell yeah</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('ohyeahdude').play()">oh yeah dude</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('ohyeah').play()">oh yeah</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('yesdude').play()">yes dude</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('hellyeahtired').play()">hell yeah tired</button>
-
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('damn').play()">damn</button>
-
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('gay').play()">I'm Gay'</button><br />
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('birthdayson').play()">Happy Birthday!</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('outtayourmind').play()">You're out of your mind'</button>
-<button class="btn btn-primary btn-lg" onclick="document.getElementById('bukkakerunt').play()">Runt of the Bukkake</button>
-
-
-
-            <h4>Stavs fat</h4>
-		    <button class="btn btn-primary btn-lg " onclick="document.getElementById('cupcake').play()">Cupcake and Candybar</button>
-            
-		    <button class="btn btn-primary btn-lg " onclick="document.getElementById('fried').play()">Fried Spam</button>
-            
-		    <button class="btn btn-primary btn-lg " onclick="document.getElementById('lent').play()">lentils and rice</button>
-            
-		    <button class="btn btn-primary btn-lg " onclick="document.getElementById('peanut').play()">peanut oil</button>
-            
-			<button class="btn btn-primary btn-lg " onclick="document.getElementById('quad').play()">quad burgers</button>
-		    
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('fava').play()">fava beans?</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('jimd').play()">too many jimmy deans</button>
-           
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('stavlying').play()">stav telling a fat lie</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('hamburgerschnitzel').play()">hamburger schnitzel</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('fourkielbasas').play()">four kielbasas</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('chickentenders').play()">lots of chicken</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('mayopaleo.mp3').play()">Mayo is paleo</button>
-
- <button class="btn btn-primary btn-lg " onclick="document.getElementById('stavsnacks').play()">stav snacks</button><br />
-
-<h4>Thousand Island Stare</h4>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('stavfucksup.mp3').play()">Stav Fucks Up</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('stavsafatfuck.mp3').play()">Stav's a fat fuck'</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('stavdenies.mp3').play()">Stav Denies the Claims</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('stavsweating.mp3').play()">Stav's sweating'</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('thousandislandstare.mp3').play()">This kid's' got a thousand island stare</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('stuffedshell.mp3').play()">stuffed shell shocked</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('battleofnampham.mp3').play()">battle of nam phan</button><br />
-
-
-
-
-		    <h4>Other Classics:</h4>
-		    <button class="btn btn-primary btn-lg " onclick="document.getElementById('Tumble').play()">Tumble Out Of Bed</button>
-		    <button class="btn btn-primary btn-lg " onclick="document.getElementById('5AM').play()">More Like 5AM</button>
-		    <button class="btn btn-primary btn-lg " onclick="document.getElementById('Pod5AM').play()">more LIKE 5aM</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('5AM3').play()">more like 5EhM</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('adam5AM').play()">bug 5am</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('more5AMadam').play()">bug2 5am</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('5AMdouble').play()">Double LIKE 5aM</button><br />
-            
-            <h4>BILLY JOEL</h4>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('billyjoel').play()">billy joel nick</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('billyjoelstav').play()">billy joel stav</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('typicalbjlyrics').play()">typical billy joel lyrics</button>
-            <button class="btn btn-primary btn-lg " onclick="document.getElementById('billyblow').play()">billy joel nickname</button>
-
-            <br />
-
-
-
-<h4>Molestrios</h4>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('stavmol').play()">Shut Up Beech Mam (Stav)</button>
-
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('nickmol').play()">Shut Up Beech Mam (Nick)</button><br />
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('nickmol3').play()">fuck u Beech Mam</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('nickmol4').play()">fuck U Beech Mam wheres my lunch</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('nickmol5').play()">Shut Up Beech Mam 5</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('nickmol2').play()">Shut Up Beech Mam 2</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('shutupbeechstav').play()">Shut Up Beech Mam (Stav)2</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('shutupbeechnick').play()">Shut Up Beech Mam (nick)3</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('fbitchmam').play()"> you fucking bech mam</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('shutupmam').play()">Shut the fuck Up mam</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('beech').play()">Beech</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('shutupmam2').play()">Shut Up beech mam2</button><br />
-
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('gaygeo').play()">Gay Gio </button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('gaygeo2').play()">Gay Gio 2</button>
-
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('dontell').play()">Shut Up Dont Tell</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('ps4').play()">PS4</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('sucknuts').play()">Suck my nuts</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('nickmol6').play()">i'll PS how i like beech'</button>
-
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('jackingout').play()">javking out</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('learnjack').play()">learn to jack</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('uglypuss').play()">your ugly puss</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('getoutjack').play()">get out jack</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('learnbeat').play()">learn to beat</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('nogeo').play()">no gio</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('geosayn').play()">gio say the nword</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('geocant').play()">gio cant</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('letgeo').play()">let gio</button>
-
-
-<h4>Rapist Jay Leno and Guest</h4>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('jayleno.mp3').play()">jay leno</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('jaylenostaring.mp3').play()">jay leno staring</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('jaylenoseeass.mp3').play()">jay leno likes the ass</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('greatpussy.mp3').play()">jay leno thinks the pussy is great</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('rideinmycar.mp3').play()">jay leno wants you in his car</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('semenjar.mp3').play()">jay leno would like you to drink something</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('slugandfuck.mp3').play()">jay leno's style'</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('guesttoday.mp3').play()">jay leno introduces his guest</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('thanksjay.mp3').play()">african guy walks on</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('staringatvaj.mp3').play()">Staring at a woman</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('stopwomen.mp3').play()">African Guy Stop Women</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('rapistjaygoodtip.mp3').play()">jay leno thinks that's a good idea</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('thanksafricanguy.mp3').play()">jay leno enjoyed his guest</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('rapistjay.mp3').play()">rapist jay</button> <br />
-
-
-<h4>African Man</h4>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('adamunwoke').play()">Adam is very unwoke</button>
-
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('neverrespstav').play()">Never Respect (Stav)</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('neverresp').play()">Never Respect (Nick)</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('noconsent').play()">Consent Doesnt Exist</button><br />
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('noconsent.mp3').play()">African Guy Reveals An African Cultural Norm</button>
-
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('stavlovesrape').play()">Stav Loves African Man</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('sandalsoffrape').play()">sandals off</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('wearsandalsnorespect').play()">wear sandals</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('neverrespect').play()">Never respect women</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('africaneeds').play()">What Africa Needs</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('penetratewhenitscreams').play()">Penetrate when it screams</button>
-
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('useaknife').play()">Use a knife</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('adamlittledicknosex').play()">Adams got small dick-itis and no sex</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('albinochild').play()">Albino Child</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('neverhadsex').play()">Never had sex</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('adamlittledick').play()">Adam's got small dick-itis</button>
-
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('albinobitch.mp3').play()">Albino Bitch</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('fuckeyes.mp3').play()">Fuck your eyes</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('bitchalbino.mp3').play()">Bitch Albino</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('kneesex.mp3').play()">Sex with your knees</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('cutarmssoup.mp3').play()">Arm Soup</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('youareabitch.mp3').play()">You are a bitch</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('onlywaytocure.mp3').play()">ONly cure</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('albinovirgin.mp3').play()">Albino virgins</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('bitchassmudda').play()">Bitch Ass Mudda Fukka</button><br />
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('nickbreakscharacter').play()">Character break</button>
-
-<h4>Mexican</h4>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('mexicannoshit').play()">No daca shit</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('mexicannoshit2').play()">I cant daca shit</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('dacashit').play()">I need to DACA shit</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('clowncollegeboipussy2').play()">Clown College Boi Puss</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('hefuckmyassmannequin').play()">He fucc my ass</button>
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('clowncollegeboipussy').play()">Clown College Boi Puss 2</button>
-
-<button class="btn btn-primary btn-lg " onclick="document.getElementById('realmex').play()">Real Mexican</button><br />
-
-
-
-
-
+                  <div id="root"></div>
 			<hr>
 		    <footer>
 				<p>StavBot 69.420. ur gay. updated 4 dec. shout outs to chuck-the-plant, ololbutts, EV99, and everyone who's getting me timestamps</p>
 		    </footer>
 		</div>
-	</div> <!-- div container -->
+	</div>
+      <script>
+      window.data = [
+        {
+          name: 'Regular Sounds',
+          items: [
+            { title: 'Absolutely', file: 'audio/Absolutely.mp3' },
+            { title: 'Hell Yeah Dude 1', file: 'audio/HellYeahDude.mp3' },
+            { title: 'Hell yeah dude two', file: 'audio/HellYeahDude2.mp3' },
+            { title: 'interesting', file: 'audio/Interesting.mp3' },
+            { title: 'nice', file: 'audio/Nice.mp3' },
+            { title: 'nice dude', file: 'audio/NiceDude.mp3' },
+            { title: 'no fuck no', file: 'audio/NoFuckNo.mp3' },
+            { title: 'right', file: 'audio/Right.mp3' },
+            { title: 'sexy grunt', file: 'audio/Sex.mp3' },
+            { title: 'stav cackle one', file: 'audio/StavCackle1.mp3' },
+            { title: 'stav cackle 2', file: 'audio/StavCackle2.mp3' },
+            { title: 'Stav cackle 4', file: 'audio/Cackle4.mp3' },
+            { title: 'stav cackle 5', file: 'audio/Cackle5.mp3' },
+            { title: 'stav cackle 6', file: 'audio/Cackle6.mp3' },
+            { title: 'stav cackle bumba', file: 'audio/stavfinallaffbumba.mp3' },
+            {
+              title: 'Stav Laugh Fuck Dude',
+              file: 'audio/StavLaughFuckDude.mp3',
+            },
+            { title: 'Stav dying laughing', file: 'audio/stavdyinglaughing.mp3' },
+            {
+              title: 'Slightly Obnoxious Stav Cackle',
+              file: 'audio/SlightlyObnoxiousStavCackle.mp3',
+            },
+            { title: 'woo', file: 'audio/woo.mp3' },
+            { title: 'wild woo', file: 'audio/woo2.mp3' },
+            { title: 'nick woo', file: 'audio/nickwoo.mp3' },
+            { title: 'wilder woo', file: 'audio/woowee.mp3' },
+            { title: 'Yes', file: 'audio/Yes.mp3' },
+            { title: "Shit's Boring Who Cares", file: 'audio/ShitsBoring.mp3' },
+            { title: 'I Suck', file: 'audio/ISuck.mp3' },
+            { title: 'Rules', file: 'audio/FuckingRules.mp3' },
+            { title: 'Me too', file: 'audio/MeToo.mp3' },
+            { title: 'Yes 2', file: 'audio/Yes2.mp3' },
+            { title: 'yeah', file: 'audio/Yeah.mp3' },
+            { title: 'yea yea yea', file: 'audio/YeaYeaYeaStav.mp3' },
+            { title: 'you know?', file: 'audio/YouKnow.mp3' },
+            { title: 'fuck yeah dude', file: 'audio/FuckYeahDude.mp3' },
+            { title: 'dude hell yeah', file: 'audio/DudeHellYeahDude.mp3' },
+            { title: 'oh yeah dude', file: 'audio/OhYeahDude.mp3' },
+            { title: 'oh yeah', file: 'audio/OhYea.mp3' },
+            { title: 'yes dude', file: 'audio/YesDude.mp3' },
+            { title: 'hell yeah tired', file: 'audio/HellYeahTired.mp3' },
+            { title: 'damn', file: 'audio/Damn.mp3' },
+            { title: "I'm Gay'", file: 'audio/StavsGay.mp3' },
+            { title: 'Happy Birthday!', file: 'audio/birthdayson.mp3' },
+            {
+              title: "You're out of your mind'",
+              file: 'audio/outtayourmind.mp3',
+            },
+            { title: 'Runt of the Bukkake', file: 'audio/bukkakerunt.mp3' },
+          ],
+        },
+        {
+          name: 'Stavs fat',
+          items: [
+            {
+              title: 'Cupcake and Candybar',
+              file: 'audio/CupcakeAndCandyBar.mp3',
+            },
+            { title: 'Fried Spam', file: 'audio/FriedSpam.mp3' },
+            {
+              title: 'lentils and rice',
+              file: 'audio/LentilsAndRiceAndShit.mp3',
+            },
+            { title: 'peanut oil', file: 'audio/PeanutOil.mp3' },
+            { title: 'quad burgers', file: 'audio/QuadBurgers.mp3' },
+            { title: 'fava beans?', file: 'audio/FavaBeans.mp3' },
+            { title: 'too many jimmy deans', file: 'audio/40Jimmy.mp3' },
+            { title: 'stav telling a fat lie', file: 'audio/stavlying.mp3' },
+            {
+              title: 'hamburger schnitzel',
+              file: 'audio/hamburgerschnitzel.mp3',
+            },
+            { title: 'four kielbasas', file: 'audio/fourkielbasas.mp3' },
+            { title: 'lots of chicken', file: 'audio/chickentenders.mp3' },
+            { title: 'Mayo is paleo', file: 'audio/mayopaleo.mp3' },
+            { title: 'stav snacks', file: 'audio/stavsnacks.mp3' },
+          ],
+        },
+        {
+          name: 'Thousand Island Stare',
+          items: [
+            { title: 'Stav Fucks Up', file: 'audio/stavfucksup.mp3' },
+            { title: "Stav's a fat fuck'", file: 'audio/stavsafatfuck.mp3' },
+            { title: 'Stav Denies the Claims', file: 'audio/stavdenies.mp3' },
+            { title: "Stav's sweating'", file: 'audio/stavsweating.mp3' },
+            {
+              title: "This kid's' got a thousand island stare",
+              file: 'audio/thousandislandstare.mp3',
+            },
+            { title: 'stuffed shell shocked', file: 'audio/stuffedshell.mp3' },
+            { title: 'battle of nam phan', file: 'audio/battleofnampham.mp3' },
+          ],
+        },
+        {
+          name: 'Other classics',
+          items: [
+            { title: 'Tumble Out Of Bed', file: 'audio/TumbleOutOfBed.mp3' },
+            { title: 'More Like 5AM', file: 'audio/MoreLike5AM.mp3' },
+            { title: 'more LIKE 5aM', file: 'audio/Podcast5AM.mp3' },
+            { title: 'more like 5EhM', file: 'audio/MoreLike5AM3.mp3' },
+            { title: 'bug 5am', file: 'audio/Adam5AM.mp3' },
+            { title: 'bug2 5am', file: 'audio/MoreLike5AMAdam.mp3' },
+            { title: 'Double LIKE 5aM', file: 'audio/MoreLike5AMDouble.mp3' },
+            { title: 'billy joel nick', file: 'audio/BillyJoel.mp3' },
+            { title: 'billy joel stav', file: 'audio/billyjoelstav.mp3' },
+            {
+              title: 'typical billy joel lyrics',
+              file: 'audio/typicalbjlyrics.mp3',
+            },
+            { title: 'billy joel nickname', file: 'audio/billyblow.mp3' },
+          ],
+        },
+        {
+          name: 'Molestrios',
+          items: [
+            {
+              title: 'Shut Up Beech Mam (Stav)',
+              file: 'audio/StavShutUpBeechMam.mp3',
+            },
+            {
+              title: 'Shut Up Beech Mam (Nick)',
+              file: 'audio/NickShutUpBeechMam.mp3',
+            },
+            { title: 'fuck u Beech Mam', file: 'audio/FuckYouBeechMam.mp3' },
+            {
+              title: 'fuck U Beech Mam wheres my lunch',
+              file: 'audio/FuckYouMakeMeLunch.mp3',
+            },
+            {
+              title: 'Shut Up Beech Mam 5',
+              file: 'audio/NickShutUpBeechMam3.mp3',
+            },
+            {
+              title: 'Shut Up Beech Mam 2',
+              file: 'audio/NickShutUpBeechMam2.mp3',
+            },
+            {
+              title: 'Shut Up Beech Mam (Stav)2',
+              file: 'audio/ShutUpBeechMamStav.mp3',
+            },
+            {
+              title: 'Shut Up Beech Mam (nick)3',
+              file: 'audio/ShutUpBeechMamNick.mp3',
+            },
+            { title: ' you fucking bech mam', file: 'audio/FuckingBitchMam.mp3' },
+            { title: 'Shut the fuck Up mam', file: 'audio/ShutUpMam.mp3' },
+            { title: 'Beech', file: 'audio/Beech.mp3' },
+            { title: 'Shut Up beech mam2', file: 'audio/ShutUpBeechMam.mp3' },
+            { title: 'Gay Gio ', file: 'audio/GayGeo.mp3' },
+            { title: 'Gay Gio 2', file: 'audio/GeosGayCantChange.mp3' },
+            { title: 'Shut Up Dont Tell', file: 'audio/ShutUpDontTell.mp3' },
+            { title: 'PS4', file: 'audio/DontTellMePS4.mp3' },
+            { title: 'Suck my nuts', file: 'audio/SuckMyNutsMam.mp3' },
+            { title: "i'll PS how i like beech'", file: 'audio/PSMyWay.mp3' },
+            { title: 'javking out', file: 'audio/JackingGetOut.mp3' },
+            { title: 'learn to jack', file: 'audio/LearnToJack.mp3' },
+            { title: 'your ugly puss', file: 'audio/UglyOldPuss.mp3' },
+            { title: 'get out jack', file: 'audio/GetOutJacking.mp3' },
+            { title: 'learn to beat', file: 'audio/LearnedToBeatIt.mp3' },
+            { title: 'no gio', file: 'audio/NoGeoNo.mp3' },
+            { title: 'gio say the nword', file: 'audio/GeoSayNWord.mp3' },
+            { title: 'gio cant', file: 'audio/GeoCantSay.mp3' },
+            { title: 'let gio', file: 'audio/LetGeoSayIt.mp3' },
+          ],
+        },
+        {
+          name: 'Rapist Jay Leno and Guest',
+          items: [
+            { title: 'jay leno', file: 'audio/jayleno.mp3' },
+            { title: 'jay leno staring', file: 'audio/jaylenostaring.mp3' },
+            { title: 'jay leno likes the ass', file: 'audio/jaylenoseeass.mp3' },
+            {
+              title: 'jay leno thinks the pussy is great',
+              file: 'audio/greatpussy.mp3',
+            },
+            {
+              title: 'jay leno wants you in his car',
+              file: 'audio/rideinmycar.mp3',
+            },
+            {
+              title: 'jay leno would like you to drink something',
+              file: 'audio/semenjar.mp3',
+            },
+            { title: "jay leno's style'", file: 'audio/slugandfuck.mp3' },
+            {
+              title: 'jay leno introduces his guest',
+              file: 'audio/guesttoday.mp3',
+            },
+            { title: 'african guy walks on', file: 'audio/thanksjay.mp3' },
+            { title: 'Staring at a woman', file: 'audio/staringatvaj.mp3' },
+            { title: 'African Guy Stop Women', file: 'audio/stopwomen.mp3' },
+            {
+              title: "jay leno thinks that's a good idea",
+              file: 'audio/rapistjaygoodtip.mp3',
+            },
+            {
+              title: 'jay leno enjoyed his guest',
+              file: 'audio/thanksafricanguy.mp3',
+            },
+            { title: 'rapist jay', file: 'audio/rapistjay.mp3' },
+          ],
+        },
+        {
+          name: 'African Man',
+          items: [
+            { title: 'Adam is very unwoke', file: 'audio/adamunwoke.mp3' },
+            {
+              title: 'Never Respect (Stav)',
+              file: 'audio/AfricanManNeverRespect.mp3',
+            },
+            {
+              title: 'Never Respect (Nick)',
+              file: 'audio/NeverRespectAWoman.mp3',
+            },
+            {
+              title: 'Consent Doesnt Exist',
+              file: 'audio/NotCapableOfConsent.mp3',
+            },
+            {
+              title: 'African Guy Reveals An African Cultural Norm',
+              file: 'audio/noconsent.mp3',
+            },
+            { title: 'Stav Loves African Man', file: 'audio/stavlovesrape.mp3' },
+            { title: 'sandals off', file: 'audio/sandalsoffrape.mp3' },
+            { title: 'wear sandals', file: 'audio/wearsandalsnorespect.mp3' },
+            { title: 'Never respect women', file: 'audio/neverrespect.mp3' },
+            { title: 'What Africa Needs', file: 'audio/africaneeds.mp3' },
+            {
+              title: 'Penetrate when it screams',
+              file: 'audio/penetratewhenitscreams.mp3',
+            },
+            { title: 'Use a knife', file: 'audio/useaknife.mp3' },
+            {
+              title: 'Adams got small dick-itis and no sex',
+              file: 'audio/adamlittledicknosex.mp3',
+            },
+            { title: 'Albino Child', file: 'audio/albinochild.mp3' },
+            { title: 'Never had sex', file: 'audio/neverhadsex.mp3' },
+            {
+              title: "Adam's got small dick-itis",
+              file: 'audio/adamlittledick.mp3',
+            },
+            { title: 'Albino Bitch', file: 'audio/albinobitch.mp3' },
+            { title: 'Fuck your eyes', file: 'audio/fuckeyes.mp3' },
+            { title: 'Bitch Albino', file: 'audio/bitchalbino.mp3' },
+            { title: 'Sex with your knees', file: 'audio/kneesex.mp3' },
+            { title: 'Arm Soup', file: 'audio/cutarmssoup.mp3' },
+            { title: 'You are a bitch', file: 'audio/youareabitch.mp3' },
+            { title: 'ONly cure', file: 'audio/onlywaytocure.mp3' },
+            { title: 'Albino virgins', file: 'audio/albinovirgin.mp3' },
+            { title: 'Bitch Ass Mudda Fukka', file: 'audio/bitchassmudda.mp3' },
+            { title: 'Character break', file: 'audio/nickbreakscharacter.mp3' },
+          ],
+        },
+        {
+          name: 'Mexican',
+          items: [
+            { title: 'No daca shit', file: 'audio/MexicanNoShit.mp3' },
+            { title: 'I cant daca shit', file: 'audio/MexicanNoShit2.mp3' },
+            { title: 'I need to DACA shit', file: 'audio/DACAShit.mp3' },
+            {
+              title: 'Clown College Boi Puss',
+              file: 'audio/clowncollegeboipussy2.mp3',
+            },
+            { title: 'He fucc my ass', file: 'audio/hefuckmyassmannequin.mp3' },
+            {
+              title: 'Clown College Boi Puss 2',
+              file: 'audio/clowncollegeboipussy.mp3',
+            },
+            { title: 'Real Mexican', file: 'audio/FromRealMexican.mp3' },
+          ],
+        },
+      ];
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var audioHTML = '';
+        for (var i = 0; i < window.data.length; i++) {
+          var category = window.data[i];
+          var itemHTML = '<h4>' + category.name + '</h4>';
+          for (var itemCount = 0; itemCount < category.items.length; itemCount++) {
+            var item = category.items[itemCount];
+            var title = item.title;
+            var file = item.file;
+            itemHTML += '<audio id="#file" src="#file"></audio><button class="btn btn-primary btn-lg"  onclick="document.getElementById(\'#file\').play()">#title</button>'
+              .replace(/#file/g, file)
+              .replace(/#title/g, title);
+          }
+          document.getElementById('root').innerHTML += itemHTML;
+        }
+      });
+
+      </script>
 </body>
 </html>
